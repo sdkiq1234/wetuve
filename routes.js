@@ -27,7 +27,6 @@ const routes = {
   users: USERS,
   userDetail: (id) => {
     if (id) {
-      2;
       return `/users/${id}`;
     } else {
       return USER_DETAIL;
@@ -51,7 +50,13 @@ const routes = {
       return EDIT_VIDEO;
     }
   },
-  deleteVideo: DELETE_VIDEO,
+  deleteVideo: (id) => {
+    if (id) {
+      return `/videos/${id}/delete`;
+    } else {
+      return DELETE_VIDEO;
+    }
+  },
 };
 
 export default routes;
