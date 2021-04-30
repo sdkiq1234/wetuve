@@ -12,7 +12,8 @@ const config = {
     rules: [
       {
         test: /\.(scss)$/,
-        use: MiniCssExtractPlugin.extract(
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
           {
             loader: "css-loader",
           },
@@ -21,15 +22,20 @@ const config = {
           },
           {
             loader: "sass-loader",
-          }
-        ),
+          },
+        ],
       },
     ],
   },
   output: {
     path: OUTPUT_DIR,
-    filename: "[name].[format]",
+    filename: "[name].js",
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "styles.css",
+    }),
+  ],
 };
 
 module.exports = config;
