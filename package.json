@@ -6,10 +6,7 @@
   "author": "Daekyu",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.13.10",
-    "@babel/node": "^7.13.12",
     "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.13.12",
     "autoprefixer": "^10.2.5",
     "babel-loader": "^8.2.2",
     "body-parser": "^1.19.0",
@@ -28,11 +25,14 @@
     "sass-loader": "^11.0.1"
   },
   "scripts": {
-    "dev:server": "nodemon --exec babel-node init.js --delay 2",
+    "dev:server": "nodemon --exec babel-node src/server.js --delay 2",
     "dev:assets": "WEBPACK_ENV=development webpack -w",
     "build:assets": "WEBPACK_ENV=production webpack"
   },
   "devDependencies": {
+    "@babel/node": "^7.13.12",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/core": "^7.13.10",
     "eslint": "^7.24.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.2.0",
