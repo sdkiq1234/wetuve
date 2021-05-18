@@ -7,7 +7,7 @@ import {
   postLogin,
 } from "../controllers/UserController";
 import { home, search } from "../controllers/videoController";
-import routes from "../routes";
+import routes from "../../routes";
 
 const globalRouter = express.Router();
 

@@ -3,9 +3,8 @@ import {
   changePassword,
   editProfile,
   userDetail,
-  users,
 } from "../controllers/UserController";
-import routes from "../routes";
+import routes from "../../routes";
 
 const userRouter = express.Router();
 
