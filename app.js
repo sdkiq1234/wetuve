@@ -21,6 +21,7 @@ app.use((req, res, next) => {
   return next();
 });
 app.set("view engine", "pug");
+app.set("views", process.cwd() + "/src/views");
 // 주어진 directory에서 file을 전달하는 middleware function
 app.use("/uploads", express.static("uploads"));
 app.use("/static", express.static("static"));
